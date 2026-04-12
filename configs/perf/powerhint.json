@@ -251,16 +251,6 @@
             "ResetOnInit": true
         },
         {
-            "Name": "sysDevicesSystemCpuCpu0CoreCtlNotPreferred",
-            "Path": "/sys/devices/system/cpu/cpu0/core_ctl/not_preferred",
-            "Values": [
-                "0 0",
-                "3"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
             "Name": "sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccSampleMs",
             "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/sample_ms",
             "Values": [
@@ -677,12 +667,6 @@
             "PowerHint": "LAUNCH",
             "Node": "sysDevicesSystemCpuBusDcvsL3Soc:qcomMemlat:l3:primeMinFreq",
             "Value": "1804800",
-            "Duration": 2000
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "sysDevicesSystemCpuCpu0CoreCtlNotPreferred",
-            "Value": "3",
             "Duration": 2000
         },
         {
