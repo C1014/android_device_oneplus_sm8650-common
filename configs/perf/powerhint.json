@@ -505,7 +505,7 @@
             "PowerHint": "INTERACTION",
             "Node": "sysDevicesSystemCpuBusDcvsDdr24091000QcomBwmonDdrMinFreq",
             "Value": "681000",
-            "Duration": 0
+            "Duration": 400
         },
         {
             "PowerHint": "INTERACTION",
@@ -535,7 +535,7 @@
             "PowerHint": "INTERACTION",
             "Node": "procSysWaltSchedBoost",
             "Value": "2",
-            "Duration": 0
+            "Duration": 400
         },
         {
             "PowerHint": "INTERACTION",
@@ -547,31 +547,31 @@
             "PowerHint": "INTERACTION",
             "Node": "procSysWaltSchedBusyHysteresisEnableCpus",
             "Value": "255",
-            "Duration": 0
+            "Duration": 400
         },
         {
             "PowerHint": "INTERACTION",
             "Node": "procSysWaltSchedBusyHystNs",
             "Value": "99",
-            "Duration": 0
+            "Duration": 400
         },
         {
             "PowerHint": "INTERACTION",
             "Node": "sysDevicesSystemCpuCpu0CoreCtlMinCpus",
             "Value": "3",
-            "Duration": 0
+            "Duration": 400
         },
         {
             "PowerHint": "INTERACTION",
             "Node": "procSysWaltSchedMinTaskUtilForColocation",
             "Value": "0",
-            "Duration": 0
+            "Duration": 400
         },
         {
             "PowerHint": "INTERACTION",
             "Node": "procSysWaltSchedMinTaskUtilForBoost",
             "Value": "0",
-            "Duration": 0
+            "Duration": 400
         },
         {
             "PowerHint": "INTERACTION",
