@@ -498,6 +498,15 @@
                 "1"
             ],
             "HoldFd": true
+        },
+        {
+            "Name": "CPU7Online",
+            "Path": "/sys/devices/system/cpu/cpu7/online",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "ResetOnInit": true
         }
     ],
     "Actions": [
@@ -1142,6 +1151,12 @@
             "Node": "sysKernelMsmPerformanceParametersCpuMinFreq",
             "Value": "0:1574400 1:1574400 2:1286400 3:1286400 4:1286400 5:2131200 6:2131200 7:1593600",
             "Duration": 1000
+        },
+        {
+            "PowerHint": "LOW_POWER",
+            "Node": "CPU7Online",
+            "Value": "0",
+            "Duration": 0
         }
     ]
 }
