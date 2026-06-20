@@ -1,0 +1,59 @@
+From c03e447bfe785bd4268fdcc59cf56652ce9e6e97 Mon Sep 17 00:00:00 2001
+From: John Galt <johngaltfirstrun@gmail.com>
+Date: Sat, 20 Jun 2026 13:31:10 +0800
+Subject: [PATCH] Settings: add haptics effects profile key
+
+---
+ core/java/android/provider/Settings.java                  | 8 +++++++-
+ .../android/provider/settings/backup/SecureSettings.java  | 1 +
+ .../settings/validators/SecureSettingsValidators.java     | 1 +
+ 3 files changed, 9 insertions(+), 1 deletion(-)
+
+diff --git a/core/java/android/provider/Settings.java b/core/java/android/provider/Settings.java
+index f58525e783b8..0b748b7aff7b 100644
+--- a/core/java/android/provider/Settings.java
++++ b/core/java/android/provider/Settings.java
+@@ -15293,11 +15293,17 @@ public final class Settings {
+                 "otp_redaction_lock_time";
+ 
+         /**
+-         * Whether to vibrate for the dt2w gesture
++         * Whether to vibrate when the gesture double tap is performed
+          * @hide
+          */
+         public static final String DOZE_DOUBLE_TAP_GESTURE_VIBRATE = "doze_double_tap_gesture_vibrate";
+ 
++        /**
++         * Haptic effects profile to be used
++         * @hide
++         */
++        public static final String HAPTIC_EFFECTS_PROFILE = "haptic_effects_profile";
++
+         /**
+          * Whether to vibrate for the tap gesture
+          * @hide
+diff --git a/packages/SettingsProvider/src/android/provider/settings/backup/SecureSettings.java b/packages/SettingsProvider/src/android/provider/settings/backup/SecureSettings.java
+index b451c1498db0..fae8e7f73987 100644
+--- a/packages/SettingsProvider/src/android/provider/settings/backup/SecureSettings.java
++++ b/packages/SettingsProvider/src/android/provider/settings/backup/SecureSettings.java
+@@ -331,5 +331,6 @@ public class SecureSettings {
+         Settings.Secure.DOZE_DOUBLE_TAP_GESTURE_VIBRATE,
+         Settings.Secure.DOZE_TAP_GESTURE_VIBRATE,
+         Settings.Secure.DOZE_PICK_UP_GESTURE_VIBRATE,
++        Settings.Secure.HAPTIC_EFFECTS_PROFILE,
+     };
+ }
+diff --git a/packages/SettingsProvider/src/android/provider/settings/validators/SecureSettingsValidators.java b/packages/SettingsProvider/src/android/provider/settings/validators/SecureSettingsValidators.java
+index b912e58a9caa..b654a16ac122 100644
+--- a/packages/SettingsProvider/src/android/provider/settings/validators/SecureSettingsValidators.java
++++ b/packages/SettingsProvider/src/android/provider/settings/validators/SecureSettingsValidators.java
+@@ -524,5 +524,6 @@ public class SecureSettingsValidators {
+         VALIDATORS.put(Secure.DOZE_DOUBLE_TAP_GESTURE_VIBRATE, BOOLEAN_VALIDATOR);
+         VALIDATORS.put(Secure.DOZE_TAP_GESTURE_VIBRATE, BOOLEAN_VALIDATOR);
+         VALIDATORS.put(Secure.DOZE_PICK_UP_GESTURE_VIBRATE, BOOLEAN_VALIDATOR);
++        VALIDATORS.put(Secure.HAPTIC_EFFECTS_PROFILE, ANY_STRING_VALIDATOR);
+     }
+ }
+-- 
+2.54.0
+
